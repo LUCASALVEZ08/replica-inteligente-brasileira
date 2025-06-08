@@ -38,17 +38,17 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="py-20 bg-gradient-to-br from-muted/20 to-muted/40">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Conheça o{' '}
             <span className="bg-gradient-axel bg-clip-text text-transparent">
               Axel AI
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Sou um assistente virtual desenvolvido para tornar sua vida mais fácil e produtiva. 
             Com tecnologia de ponta, posso ajudar você em diversas tarefas do dia a dia.
           </p>
@@ -59,7 +59,7 @@ const AboutSection = () => {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/70 backdrop-blur-sm"
+              className="group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 bg-card/70 backdrop-blur-sm"
             >
               <CardContent className="p-8 text-center">
                 <div className="mb-6 flex justify-center">
@@ -67,10 +67,10 @@ const AboutSection = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-foreground mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>

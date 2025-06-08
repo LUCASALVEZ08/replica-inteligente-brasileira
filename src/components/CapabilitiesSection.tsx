@@ -81,17 +81,17 @@ const capabilities = [
 
 const CapabilitiesSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             O que posso fazer por{' '}
             <span className="bg-gradient-axel bg-clip-text text-transparent">
               você?
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Minhas capacidades são vastas e estão em constante evolução. 
             Aqui estão algumas das principais áreas onde posso te ajudar.
           </p>
@@ -102,7 +102,7 @@ const CapabilitiesSection = () => {
           {capabilities.map((capability, index) => (
             <Card 
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-gray-200"
+              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <CardHeader className="text-center pb-4">
                 <div className="flex justify-center mb-4">
@@ -110,7 +110,7 @@ const CapabilitiesSection = () => {
                     <capability.icon className="w-7 h-7 text-white" />
                   </div>
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900">
+                <CardTitle className="text-xl font-bold text-foreground">
                   {capability.category}
                 </CardTitle>
               </CardHeader>
@@ -119,7 +119,7 @@ const CapabilitiesSection = () => {
                   {capability.items.map((item, itemIndex) => (
                     <li 
                       key={itemIndex}
-                      className="flex items-start text-gray-600"
+                      className="flex items-start text-muted-foreground"
                     >
                       <div className="w-2 h-2 bg-gradient-axel rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       <span className="leading-relaxed">{item}</span>
@@ -133,7 +133,7 @@ const CapabilitiesSection = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-muted-foreground mb-8">
             E isso é só o começo! Posso me adaptar às suas necessidades específicas.
           </p>
           <button className="bg-gradient-axel text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105">

@@ -47,24 +47,24 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section className="py-20 bg-gradient-to-br from-muted to-muted/60">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Experimente o{' '}
             <span className="bg-gradient-axel bg-clip-text text-transparent">
               Axel AI
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Teste minhas capacidades agora mesmo! Faça uma pergunta ou use uma das sugestões abaixo.
           </p>
         </div>
 
         {/* Chat Interface */}
         <div className="max-w-4xl mx-auto">
-          <Card className="bg-white/10 backdrop-blur-md border-gray-600">
+          <Card className="bg-card/90 backdrop-blur-md border-border">
             <CardContent className="p-0">
               {/* Messages Area */}
               <div className="h-96 overflow-y-auto p-6 space-y-4">
@@ -74,13 +74,13 @@ const ExperienceSection = () => {
                     className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div className={`flex items-start space-x-3 max-w-xs md:max-w-md lg:max-w-lg ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                      <div className={`p-2 rounded-full ${message.type === 'user' ? 'bg-gradient-axel' : 'bg-gray-600'}`}>
+                      <div className={`p-2 rounded-full ${message.type === 'user' ? 'bg-gradient-axel' : 'bg-muted'}`}>
                         {message.type === 'user' ? 
                           <User className="w-4 h-4 text-white" /> : 
-                          <MessageSquare className="w-4 h-4 text-white" />
+                          <MessageSquare className="w-4 h-4 text-foreground" />
                         }
                       </div>
-                      <div className={`p-4 rounded-lg ${message.type === 'user' ? 'bg-gradient-axel text-white' : 'bg-gray-700 text-gray-100'}`}>
+                      <div className={`p-4 rounded-lg ${message.type === 'user' ? 'bg-gradient-axel text-white' : 'bg-muted text-foreground'}`}>
                         <p className="text-sm leading-relaxed">{message.content}</p>
                       </div>
                     </div>
@@ -89,7 +89,7 @@ const ExperienceSection = () => {
               </div>
 
               {/* Input Area */}
-              <div className="border-t border-gray-600 p-6">
+              <div className="border-t border-border p-6">
                 <div className="flex space-x-4">
                   <input
                     type="text"
@@ -97,7 +97,7 @@ const ExperienceSection = () => {
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleSendMessage(inputValue)}
                     placeholder="Digite sua mensagem..."
-                    className="flex-1 bg-gray-700 text-white border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="flex-1 bg-background text-foreground border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                   <Button 
                     onClick={() => handleSendMessage(inputValue)}
@@ -109,13 +109,13 @@ const ExperienceSection = () => {
 
                 {/* Quick Questions */}
                 <div className="mt-4">
-                  <p className="text-gray-400 text-sm mb-3">Perguntas rápidas:</p>
+                  <p className="text-muted-foreground text-sm mb-3">Perguntas rápidas:</p>
                   <div className="flex flex-wrap gap-2">
                     {quickQuestions.map((question, index) => (
                       <button
                         key={index}
                         onClick={() => handleSendMessage(question)}
-                        className="text-xs bg-gray-700 text-gray-300 px-3 py-2 rounded-full hover:bg-gray-600 transition-colors duration-200"
+                        className="text-xs bg-muted text-muted-foreground px-3 py-2 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
                       >
                         {question}
                       </button>

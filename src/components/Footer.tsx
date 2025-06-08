@@ -5,7 +5,7 @@ import { Heart, Github, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-card border-t border-border text-foreground py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -14,18 +14,18 @@ const Footer = () => {
               <Logo className="w-10 h-10" />
               <span className="text-2xl font-bold">Axel AI</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-muted-foreground mb-6 max-w-md">
               Seu assistente virtual inteligente, sempre pronto para ajudar. 
               Transformando a forma como você interage com a tecnologia.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -35,10 +35,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Produto</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Funcionalidades</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Preços</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">API</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentação</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Preços</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">API</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Documentação</a></li>
             </ul>
           </div>
 
@@ -46,20 +46,20 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Suporte</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Central de Ajuda</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contato</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Status</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Comunidade</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Central de Ajuda</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Contato</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Status</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Comunidade</a></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-muted-foreground text-sm">
             © 2024 Axel AI. Todos os direitos reservados.
           </p>
-          <p className="text-gray-400 text-sm flex items-center mt-4 md:mt-0">
+          <p className="text-muted-foreground text-sm flex items-center mt-4 md:mt-0">
             Feito com <Heart className="w-4 h-4 text-red-500 mx-1" /> para tornar sua vida mais fácil
           </p>
         </div>
